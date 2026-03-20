@@ -1,0 +1,22 @@
+### Health Check
+GET http://localhost:3000/api/blogs
+
+### Get all blogs
+GET http://localhost:3000/api/blogs
+
+### Create a new blog
+POST http://localhost:3000/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Test Blog",
+  "author": "Test Author",
+  "url": "https://example.com",
+  "likes": 5
+}
+
+### Get blog by id
+GET http://localhost:3000/api/blogs/:id
+
+### Delete blog
+DELETE http://localhost:3000/api/blogs/:id
