@@ -1,0 +1,59 @@
+### 测试 User API
+
+### 1. 创建用户 - 成功
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "name": "Test User",
+  "password": "password123"
+}
+
+###
+
+### 2. 创建用户 - 缺少密码
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "name": "Test User 2"
+}
+
+###
+
+### 3. 创建用户 - 缺少用户名
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Test User 3",
+  "password": "password123"
+}
+
+###
+
+### 4. 创建用户 - 空密码
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "testuser4",
+  "name": "Test User 4",
+  "password": ""
+}
+
+###
+
+### 5. 创建用户 - 密码太短
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "testuser5",
+  "name": "Test User 5",
+  "password": "ab"
+}
+
+###
